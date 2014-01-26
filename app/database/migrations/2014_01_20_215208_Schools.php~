@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+class Schools extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('schools', function($table){
+			$table->increments('id');
+			$table->string('name', 200);
+			$table->string('city', 60);
+			$table->string('state', 50);
+			$table->string('country', 70);
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('authors');
+	}
+
+}
